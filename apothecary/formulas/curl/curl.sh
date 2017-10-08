@@ -40,7 +40,7 @@ function build() {
 	if [ "$TYPE" == "vs" ] ; then
 		unset TMP
 		unset TEMP
-		local OF_LIBS_OPENSSL_ABS_PATH=$(realpath ../openssl)
+		local OF_LIBS_OPENSSL_ABS_PATH=$(getrealpath ../openssl)
 		export OPENSSL_PATH=$OF_LIBS_OPENSSL_ABS_PATH
 		export OPENSSL_LIBRARIES=$OF_LIBS_OPENSSL_ABS_PATH/lib/
 		PATH=$OPENSSL_LIBRARIES:$PATH cmd //c "projects\\generate.bat vc14"
